@@ -8,5 +8,11 @@
     "build": "echo 'db build placeholder'",
     "lint": "echo 'db lint placeholder'",
     "test": "echo 'db test placeholder'"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
   }
 }

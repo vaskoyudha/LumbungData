@@ -3,9 +3,27 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "echo 'web build placeholder'",
-    "dev": "echo 'web dev placeholder'",
-    "lint": "echo 'web lint placeholder'",
+    "build": "next build --webpack",
+    "dev": "next dev --webpack",
+    "start": "next start",
+    "lint": "next lint",
     "test": "echo 'web test placeholder'"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*",
+    "@serwist/next": "9.5.7",
+    "@serwist/turbopack": "9.5.7",
+    "esbuild-wasm": "0.25.5",
+    "next": "16.2.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "serwist": "9.5.7",
+    "tailwindcss": "4.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
   }
 }

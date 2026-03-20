@@ -2,11 +2,14 @@
   "name": "@repo/shared",
   "version": "0.0.1",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/types.ts"
   },
   "scripts": {
     "build": "echo 'shared build placeholder'",
     "lint": "echo 'shared lint placeholder'",
     "test": "echo 'shared test placeholder'"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
   }
 }

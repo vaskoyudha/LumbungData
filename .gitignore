@@ -7,6 +7,10 @@ dist/
 .next/
 out/
 
+# Serwist
+public/sw*
+public/swe-worker*
+
 # Turbo
 .turbo/
 

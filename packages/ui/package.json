@@ -8,5 +8,11 @@
     "build": "echo 'ui build placeholder'",
     "lint": "echo 'ui lint placeholder'",
     "test": "echo 'ui test placeholder'"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
   }
 }
