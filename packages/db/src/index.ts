@@ -25,6 +25,27 @@ export {
   deleteFarmerProfile,
 } from './farmer';
 
+// Market CRUD
+export {
+  createMarketPrice,
+  getMarketPrice,
+  listMarketPrices,
+  listMarketPricesByCrop,
+  getLatestPrices,
+  updateMarketPrice,
+  deleteMarketPrice,
+} from './market';
+
+// Subsidy CRUD
+export {
+  createDistribution,
+  getDistribution,
+  listDistributions,
+  listPendingDistributions,
+  updateDistribution,
+  deleteDistribution,
+} from './subsidy';
+
 // Database utilities
 export { getDatabase, DB_NAMES } from './databases';
 export { getDBConstructor } from './pouchdb';
