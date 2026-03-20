@@ -1,0 +1,19 @@
+{
+  "app": {
+    "name": "LumbungData",
+    "tagline": "Your Village Farm Data"
+  },
+  "nav": {
+    "home": "Home",
+    "soil": "Soil",
+    "market": "Market",
+    "subsidy": "Subsidy",
+    "sync": "Sync"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "offline": "Offline"
+  }
+}

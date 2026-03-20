@@ -25,13 +25,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="id">
-      <body>
-        <SerwistProvider swUrl="/sw.js">
-          <StoragePersist />
-          {children}
-        </SerwistProvider>
-      </body>
-    </html>
+    <SerwistProvider swUrl="/sw.js">
+      <StoragePersist />
+      {children}
+    </SerwistProvider>
   );
 }

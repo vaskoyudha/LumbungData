@@ -1,0 +1,19 @@
+{
+  "app": {
+    "name": "LumbungData",
+    "tagline": "Data Pertanian Desa Anda"
+  },
+  "nav": {
+    "home": "Beranda",
+    "soil": "Tanah",
+    "market": "Pasar",
+    "subsidy": "Subsidi",
+    "sync": "Sinkronisasi"
+  },
+  "common": {
+    "save": "Simpan",
+    "cancel": "Batal",
+    "loading": "Memuat...",
+    "offline": "Offline"
+  }
+}
