@@ -6,10 +6,11 @@ node_modules/
 dist/
 .next/
 out/
+*.tsbuildinfo
 
 # Serwist
-public/sw*
-public/swe-worker*
+**/public/sw*
+**/public/swe-worker*
 
 # Turbo
 .turbo/

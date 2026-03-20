@@ -1,10 +1,18 @@
 import type { Metadata, Viewport } from "next";
+import type { ReactNode } from "react";
 import "./globals.css";
+import { SerwistProvider } from "./serwist";
 import { StoragePersist } from "./components/storage-persist";
 
 export const metadata: Metadata = {
   title: "LumbungData",
   description: "Platform data pertanian offline-first untuk petani kecil Indonesia",
+  applicationName: "LumbungData",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "LumbungData",
+  },
 };
 
 export const viewport: Viewport = {
@@ -15,16 +23,14 @@ export const viewport: Viewport = {
   themeColor: "#16a34a",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id">
       <body>
-        <StoragePersist />
-        {children}
+        <SerwistProvider swUrl="/sw.js">
+          <StoragePersist />
+          {children}
+        </SerwistProvider>
       </body>
     </html>
   );
