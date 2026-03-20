@@ -4,9 +4,7 @@ import { useCallback } from "react";
 
 export default function OfflinePage() {
   const handleReload = useCallback(() => {
-    if (typeof (globalThis as any).window !== "undefined") {
-      (globalThis as any).window.location.reload();
-    }
+    (globalThis as typeof globalThis & { location: { reload: () => void } }).location.reload();
   }, []);
   return (
     <main className="flex min-h-screen items-center justify-center bg-green-50">
