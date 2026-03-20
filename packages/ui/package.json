@@ -1,0 +1,12 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.1",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "echo 'ui build placeholder'",
+    "lint": "echo 'ui lint placeholder'",
+    "test": "echo 'ui test placeholder'"
+  }
+}

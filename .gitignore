@@ -1,0 +1,23 @@
+# Node
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.next/
+out/
+
+# Turbo
+.turbo/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Planning artifacts
+.sisyphus/
+
+# Editor
+.DS_Store
+*.swp

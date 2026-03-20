@@ -1,0 +1,12 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.1",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "echo 'db build placeholder'",
+    "lint": "echo 'db lint placeholder'",
+    "test": "echo 'db test placeholder'"
+  }
+}

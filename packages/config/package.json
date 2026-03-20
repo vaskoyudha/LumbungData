@@ -1,0 +1,12 @@
+{
+  "name": "@repo/config",
+  "version": "0.0.1",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "echo 'config build placeholder'",
+    "lint": "echo 'config lint placeholder'",
+    "test": "echo 'config test placeholder'"
+  }
+}

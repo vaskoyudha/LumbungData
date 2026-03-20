@@ -1,0 +1,11 @@
+{
+  "name": "@lumbung/api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "echo 'api build placeholder'",
+    "dev": "echo 'api dev placeholder'",
+    "lint": "echo 'api lint placeholder'",
+    "test": "echo 'api test placeholder'"
+  }
+}
