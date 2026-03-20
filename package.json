@@ -10,6 +10,7 @@
     "clean": "turbo clean && rm -rf node_modules"
   },
   "devDependencies": {
+    "@types/node": "25.5.0",
     "turbo": "latest"
   }
 }

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@repo/shared": "workspace:*",
+    "@repo/ui": "workspace:*",
     "@serwist/next": "9.5.7",
     "next": "16.2.0",
     "next-intl": "4.8.3",
