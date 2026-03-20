@@ -10,9 +10,17 @@
     "test": "echo 'db test placeholder'"
   },
   "dependencies": {
-    "@repo/shared": "workspace:*"
+    "@repo/shared": "workspace:*",
+    "pouchdb-adapter-indexeddb": "^9.0.0",
+    "pouchdb-core": "^9.0.0",
+    "pouchdb-find": "^9.0.0",
+    "pouchdb-replication": "^9.0.0"
   },
   "devDependencies": {
+    "@repo/config": "workspace:*",
+    "@types/pouchdb-adapter-indexeddb": "^9.0.0",
+    "@types/pouchdb-core": "^7.0.15",
+    "@types/pouchdb-find": "^7.3.3",
     "typescript": "^5.3.3"
   }
 }
