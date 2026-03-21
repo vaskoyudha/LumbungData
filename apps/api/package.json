@@ -2,10 +2,21 @@
   "name": "@lumbung/api",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "echo 'api build placeholder'",
-    "dev": "echo 'api dev placeholder'",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc --noEmit",
+    "start": "node dist/index.js",
     "lint": "echo 'api lint placeholder'",
     "test": "echo 'api test placeholder'"
+  },
+  "dependencies": {
+    "hono": "^4.7.0",
+    "@hono/node-server": "^1.13.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
   }
 }
