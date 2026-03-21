@@ -1,0 +1,20 @@
+{
+  "name": "@repo/p2p",
+  "version": "0.0.1",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "echo 'p2p build placeholder'",
+    "lint": "echo 'p2p lint placeholder'",
+    "test": "echo 'p2p test placeholder'"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "@types/qrcode": "^1.5.5",
+    "typescript": "^5.3.3"
+  }
+}

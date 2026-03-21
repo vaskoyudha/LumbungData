@@ -63,6 +63,23 @@
       "villageRequired": "Desa wajib diisi"
     }
   },
+  "sync": {
+    "title": "Sinkronisasi P2P",
+    "startSync": "Mulai Sinkronisasi",
+    "joinSync": "Bergabung Sinkronisasi",
+    "generating": "Membuat kode QR...",
+    "scanPrompt": "Pindai kode QR dari perangkat lain",
+    "waitingForAnswer": "Menunggu jawaban dari perangkat lain...",
+    "connected": "Terhubung!",
+    "error": "Terjadi kesalahan",
+    "pasteAnswer": "Tempel Jawaban QR",
+    "pasteOffer": "Tempel Kode Penawaran",
+    "step1": "Langkah 1: Buat atau Bergabung",
+    "step2": "Langkah 2: Bagikan QR",
+    "scannerPlaceholder": "Pemindai kamera akan muncul di sini",
+    "answerGenerated": "Jawaban berhasil dibuat",
+    "connectionComplete": "Koneksi selesai"
+  },
   "home": {
     "soilDescription": "Catat dan pantau kondisi tanah",
     "marketDescription": "Lihat dan catat harga pasar",

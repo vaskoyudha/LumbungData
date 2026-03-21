@@ -63,6 +63,23 @@
       "villageRequired": "Village is required"
     }
   },
+  "sync": {
+    "title": "P2P Sync",
+    "startSync": "Start Sync",
+    "joinSync": "Join Sync",
+    "generating": "Generating QR code...",
+    "scanPrompt": "Scan the QR code from the other device",
+    "waitingForAnswer": "Waiting for answer from the other device...",
+    "connected": "Connected!",
+    "error": "An error occurred",
+    "pasteAnswer": "Paste Answer QR",
+    "pasteOffer": "Paste Offer Code",
+    "step1": "Step 1: Create or Join",
+    "step2": "Step 2: Share QR",
+    "scannerPlaceholder": "Camera scanner will appear here",
+    "answerGenerated": "Answer generated successfully",
+    "connectionComplete": "Connection complete"
+  },
   "home": {
     "soilDescription": "Record and monitor soil conditions",
     "marketDescription": "View and record market prices",
