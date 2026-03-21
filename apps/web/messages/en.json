@@ -84,5 +84,8 @@
     "soilDescription": "Record and monitor soil conditions",
     "marketDescription": "View and record market prices",
     "profileDescription": "Manage your profile"
+  },
+  "offline": {
+    "noConnection": "No internet connection"
   }
 }

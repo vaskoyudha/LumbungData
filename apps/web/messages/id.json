@@ -84,5 +84,8 @@
     "soilDescription": "Catat dan pantau kondisi tanah",
     "marketDescription": "Lihat dan catat harga pasar",
     "profileDescription": "Kelola profil Anda"
+  },
+  "offline": {
+    "noConnection": "Tidak ada koneksi internet"
   }
 }

@@ -5,6 +5,7 @@ export const DB_NAMES = {
   market: 'market_prices',
   farmers: 'farmer_profiles',
   subsidies: 'subsidy_distributions',
+  pendingTransactions: 'pending_transactions',
 } as const;
 
 type DBName = (typeof DB_NAMES)[keyof typeof DB_NAMES];
