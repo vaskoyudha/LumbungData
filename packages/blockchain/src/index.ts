@@ -1,14 +1,14 @@
-export { createWallet, loadStoredWallet, loadWallet, storeWallet } from './wallet.js';
-export type { WalletInfo } from './wallet.js';
-export { signDistributionTx } from './offline-signer.js';
-export { SUBSIDY_LEDGER_ABI } from './contract-abi.js';
+export { createWallet, loadStoredWallet, loadWallet, storeWallet } from './wallet';
+export type { WalletInfo } from './wallet';
+export { signDistributionTx } from './offline-signer';
+export { SUBSIDY_LEDGER_ABI } from './contract-abi';
 export {
   queueTransaction,
   getPendingTransactions,
   markBroadcast,
   markConfirmed,
   markFailed,
-} from './tx-queue.js';
-export type { PendingTransaction } from './tx-queue.js';
-export { broadcastPendingTransactions } from './broadcaster.js';
-export { startAutoBroadcast, stopAutoBroadcast } from './auto-broadcast.js';
+} from './tx-queue';
+export type { PendingTransaction } from './tx-queue';
+export { broadcastPendingTransactions } from './broadcaster';
+export { startAutoBroadcast, stopAutoBroadcast } from './auto-broadcast';

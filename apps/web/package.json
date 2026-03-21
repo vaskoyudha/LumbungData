@@ -10,6 +10,7 @@
     "test": "echo 'web test placeholder'"
   },
   "dependencies": {
+    "@repo/blockchain": "workspace:*",
     "@repo/db": "workspace:*",
     "@repo/p2p": "workspace:*",
     "@repo/shared": "workspace:*",

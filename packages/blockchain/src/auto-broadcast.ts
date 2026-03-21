@@ -1,4 +1,4 @@
-import { broadcastPendingTransactions } from './broadcaster.js';
+import { broadcastPendingTransactions } from './broadcaster';
 
 let onlineHandler: (() => void) | null = null;
 

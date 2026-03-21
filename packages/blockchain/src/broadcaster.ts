@@ -1,4 +1,4 @@
-import { getPendingTransactions, markBroadcast, markFailed } from './tx-queue.js';
+import { getPendingTransactions, markBroadcast, markFailed } from './tx-queue';
 
 export async function broadcastPendingTransactions(rpcUrl: string): Promise<void> {
   const pending = await getPendingTransactions();

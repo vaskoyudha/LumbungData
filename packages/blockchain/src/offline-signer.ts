@@ -1,4 +1,4 @@
-import { SUBSIDY_LEDGER_ABI } from './contract-abi.js';
+import { SUBSIDY_LEDGER_ABI } from './contract-abi';
 
 interface SigningResult {
   signedTx: string;
