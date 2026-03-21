@@ -64,3 +64,5 @@ export type { SyncHandle } from './sync';
 export { resolveConflicts } from './conflict-resolution';
 export { SyncManager } from './sync-manager';
 export type { SyncState } from './sync-manager';
+export { SyncOrchestrator } from './sync-orchestrator';
+export type { OrchestratorStatus, OrchestratorConfig } from './sync-orchestrator';

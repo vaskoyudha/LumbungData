@@ -131,6 +131,7 @@
     "readyToSync": "Siap sinkronisasi",
     "syncingCloud": "Menyinkronkan ke cloud...",
     "syncingP2P": "Menyinkronkan dengan petani terdekat...",
+    "syncingBlockchain": "Menyiarkan ke blockchain...",
     "lastSynced": "Terakhir disinkronkan: {time}",
     "pendingChanges": "({count} perubahan menunggu)",
     "syncNow": "Sinkronisasi Sekarang",

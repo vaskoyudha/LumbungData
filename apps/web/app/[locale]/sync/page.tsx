@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useRouter, useParams } from 'next/navigation';
 import { PageHeader, Button, Card } from '@repo/ui';
 import { PeerConnectionCard } from '@/src/components/PeerConnectionCard';
+import { useSyncStatus } from '@/src/providers/SyncProvider';
 
 type SyncRole = 'idle' | 'initiator' | 'joiner';
 type SyncStep = 'choose' | 'offer-created' | 'waiting-answer' | 'connected' | 'error';
@@ -37,6 +38,7 @@ export default function SyncPage() {
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [cloudSyncing, setCloudSyncing] = useState(false);
+  const { connectPeer, disconnectPeer } = useSyncStatus();
 
   const handleStartSync = async (): Promise<void> => {
     setRole('initiator');
@@ -66,6 +68,11 @@ export default function SyncPage() {
     try {
       const { completeConnection } = await import('@repo/p2p');
       await completeConnection(answerInput.trim());
+      const { getActivePeer } = await import('@repo/p2p');
+      const activePeer = getActivePeer();
+      if (activePeer !== undefined) {
+        connectPeer(activePeer.dataChannel);
+      }
       setStep('connected');
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);
@@ -91,6 +98,11 @@ export default function SyncPage() {
       const dataUrl = await generateQRCode(compressed);
       setQrDataUrl(dataUrl);
       setOfferData(compressed);
+      const { getActivePeer } = await import('@repo/p2p');
+      const activePeer = getActivePeer();
+      if (activePeer !== undefined) {
+        connectPeer(activePeer.dataChannel);
+      }
       setStep('connected');
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);
@@ -116,6 +128,7 @@ export default function SyncPage() {
   };
 
   const handleReset = (): void => {
+    disconnectPeer();
     setRole('idle');
     setStep('choose');
     setQrDataUrl('');

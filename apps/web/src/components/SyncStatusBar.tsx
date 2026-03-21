@@ -23,7 +23,10 @@ interface StatusConfig {
   labelKey: string;
 }
 
-function getStatusConfig(mode: 'local' | 'p2p' | 'cloud', isOnline: boolean): StatusConfig {
+function getStatusConfig(
+  mode: 'local' | 'p2p' | 'cloud' | 'blockchain',
+  isOnline: boolean,
+): StatusConfig {
   if (!isOnline) {
     return {
       bgClass: 'bg-stone-400',
@@ -51,12 +54,19 @@ function getStatusConfig(mode: 'local' | 'p2p' | 'cloud', isOnline: boolean): St
         textClass: 'text-white',
         labelKey: 'syncingP2P',
       };
+    case 'blockchain':
+      return {
+        bgClass: 'bg-purple-600',
+        textClass: 'text-white',
+        labelKey: 'syncingBlockchain',
+      };
   }
 }
 
 export function SyncStatusBar() {
   const t = useTranslations('syncStatus');
   const { status } = useSyncStatus();
+  const lastSynced = status.lastCloudSync ?? status.lastP2PSync;
 
   const config = getStatusConfig(status.mode, status.isOnline);
 
@@ -69,17 +79,15 @@ export function SyncStatusBar() {
       <div className="flex items-center justify-between min-h-[48px] max-w-lg mx-auto">
         <div className="flex items-center gap-2">
           <span className="text-sm font-medium">{t(config.labelKey)}</span>
-          {status.pendingChanges > 0 && (
+          {status.pendingDocs > 0 && (
             <span className="text-xs opacity-80">
-              ({t('pendingChanges', { count: status.pendingChanges })})
+              ({t('pendingChanges', { count: status.pendingDocs })})
             </span>
           )}
         </div>
-        {status.lastSynced !== '' && (
-          <span className="text-xs opacity-80">
-            {t('lastSynced', { time: formatRelativeTime(status.lastSynced) })}
-          </span>
-        )}
+        <span className="text-xs opacity-80" suppressHydrationWarning>
+          {lastSynced !== null ? t('lastSynced', { time: formatRelativeTime(lastSynced) }) : null}
+        </span>
       </div>
     </div>
   );

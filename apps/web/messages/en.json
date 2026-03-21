@@ -131,6 +131,7 @@
     "readyToSync": "Ready to sync",
     "syncingCloud": "Syncing to cloud...",
     "syncingP2P": "Syncing with nearby farmer...",
+    "syncingBlockchain": "Broadcasting to blockchain...",
     "lastSynced": "Last synced: {time}",
     "pendingChanges": "({count} changes pending)",
     "syncNow": "Sync Now",
