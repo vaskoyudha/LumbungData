@@ -125,5 +125,20 @@
     "verifyLoad": "Muat Data",
     "verifiedOnChain": "Terverifikasi di Blockchain \u2713",
     "noDistributions": "Tidak ada distribusi ditemukan untuk petani ini"
+  },
+  "syncStatus": {
+    "offline": "Tersimpan lokal",
+    "readyToSync": "Siap sinkronisasi",
+    "syncingCloud": "Menyinkronkan ke cloud...",
+    "syncingP2P": "Menyinkronkan dengan petani terdekat...",
+    "lastSynced": "Terakhir disinkronkan: {time}",
+    "pendingChanges": "({count} perubahan menunggu)",
+    "syncNow": "Sinkronisasi Sekarang",
+    "peerConnected": "Terhubung ke petani",
+    "readyToExchange": "Siap bertukar data",
+    "historyTitle": "Riwayat Sinkronisasi",
+    "modeCloud": "Sinkronisasi Cloud",
+    "modeP2P": "Sinkronisasi P2P",
+    "docsCount": "{count} dokumen"
   }
 }

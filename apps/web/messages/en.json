@@ -125,5 +125,20 @@
     "verifyLoad": "Load Data",
     "verifiedOnChain": "Verified on Blockchain \u2713",
     "noDistributions": "No distributions found for this farmer"
+  },
+  "syncStatus": {
+    "offline": "Saved locally",
+    "readyToSync": "Ready to sync",
+    "syncingCloud": "Syncing to cloud...",
+    "syncingP2P": "Syncing with nearby farmer...",
+    "lastSynced": "Last synced: {time}",
+    "pendingChanges": "({count} changes pending)",
+    "syncNow": "Sync Now",
+    "peerConnected": "Connected to farmer",
+    "readyToExchange": "Ready to exchange data",
+    "historyTitle": "Sync History",
+    "modeCloud": "Cloud Sync",
+    "modeP2P": "P2P Sync",
+    "docsCount": "{count} documents"
   }
 }

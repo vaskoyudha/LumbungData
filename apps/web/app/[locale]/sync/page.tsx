@@ -4,12 +4,26 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter, useParams } from 'next/navigation';
 import { PageHeader, Button, Card } from '@repo/ui';
+import { PeerConnectionCard } from '@/src/components/PeerConnectionCard';
 
 type SyncRole = 'idle' | 'initiator' | 'joiner';
 type SyncStep = 'choose' | 'offer-created' | 'waiting-answer' | 'connected' | 'error';
 
+interface SyncHistoryEntry {
+  date: string;
+  mode: 'cloud' | 'p2p';
+  docsCount: number;
+}
+
+const MOCK_SYNC_HISTORY: SyncHistoryEntry[] = [
+  { date: '2026-03-20T14:30:00Z', mode: 'cloud', docsCount: 12 },
+  { date: '2026-03-19T09:15:00Z', mode: 'p2p', docsCount: 5 },
+  { date: '2026-03-18T16:45:00Z', mode: 'cloud', docsCount: 8 },
+];
+
 export default function SyncPage() {
   const t = useTranslations('sync');
+  const tStatus = useTranslations('syncStatus');
   const router = useRouter();
   const params = useParams();
   const locale = typeof params.locale === 'string' ? params.locale : 'id';
@@ -22,6 +36,7 @@ export default function SyncPage() {
   const [offerInput, setOfferInput] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [loading, setLoading] = useState(false);
+  const [cloudSyncing, setCloudSyncing] = useState(false);
 
   const handleStartSync = async (): Promise<void> => {
     setRole('initiator');
@@ -86,6 +101,20 @@ export default function SyncPage() {
     }
   };
 
+  const handleCloudSync = async (): Promise<void> => {
+    setCloudSyncing(true);
+    try {
+      const { startSync } = await import('@repo/db');
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
+      await startSync('lumbung-farmers', apiUrl);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      setErrorMessage(message);
+    } finally {
+      setCloudSyncing(false);
+    }
+  };
+
   const handleReset = (): void => {
     setRole('idle');
     setStep('choose');
@@ -98,13 +127,23 @@ export default function SyncPage() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-stone-50 pb-16">
       <PageHeader
         title={t('title')}
         showBack
         onBack={() => router.push(`/${locale}`)}
       />
       <div className="max-w-lg mx-auto p-4 space-y-4">
+        <Button
+          onClick={() => void handleCloudSync()}
+          loading={cloudSyncing}
+          disabled={cloudSyncing}
+        >
+          {tStatus('syncNow')}
+        </Button>
+
+        <PeerConnectionCard isConnected={step === 'connected'} />
+
         {step === 'choose' && (
           <Card title={t('step1')}>
             <div className="flex flex-col gap-3">
@@ -211,6 +250,47 @@ export default function SyncPage() {
             <p className="text-stone-500">{t('generating')}</p>
           </div>
         )}
+
+        <div className="pt-4">
+          <h2 className="text-lg font-semibold text-stone-800 mb-3">
+            {tStatus('historyTitle')}
+          </h2>
+          <div className="space-y-2">
+            {MOCK_SYNC_HISTORY.map((entry) => (
+              <div
+                key={entry.date}
+                className="flex items-center justify-between rounded-lg border border-stone-200 bg-white p-3"
+              >
+                <div className="flex items-center gap-3">
+                  <span
+                    className={`inline-flex h-2 w-2 rounded-full ${
+                      entry.mode === 'cloud' ? 'bg-green-500' : 'bg-blue-500'
+                    }`}
+                  />
+                  <div>
+                    <p className="text-sm font-medium text-stone-700">
+                      {entry.mode === 'cloud'
+                        ? tStatus('modeCloud')
+                        : tStatus('modeP2P')}
+                    </p>
+                    <p className="text-xs text-stone-400">
+                      {new Date(entry.date).toLocaleDateString(locale, {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                      })}
+                    </p>
+                  </div>
+                </div>
+                <span className="text-xs text-stone-500">
+                  {tStatus('docsCount', { count: entry.docsCount })}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

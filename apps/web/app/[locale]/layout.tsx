@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { routing } from '@/src/i18n/routing';
 import { SyncProvider } from '@/src/providers/SyncProvider';
 import { OfflineBanner } from '@/src/components/OfflineBanner';
+import { SyncStatusBar } from '@/src/components/SyncStatusBar';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -29,6 +30,7 @@ export default async function LocaleLayout({
         <SyncProvider>
           <NextIntlClientProvider messages={messages}>
             {children}
+            <SyncStatusBar />
           </NextIntlClientProvider>
         </SyncProvider>
       </body>
