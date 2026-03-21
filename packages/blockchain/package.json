@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "tsc --noEmit",
+    "test:unit": "vitest run --config vitest.config.ts",
     "clean": "rm -rf dist"
   },
   "dependencies": {
@@ -16,6 +17,8 @@
     "ethers": "^6.13.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "happy-dom": "^20.8.4",
+    "typescript": "^5.0.0",
+    "vitest": "^4.1.0"
   }
 }
