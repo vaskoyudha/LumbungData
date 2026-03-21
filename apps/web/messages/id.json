@@ -126,6 +126,21 @@
     "verifiedOnChain": "Terverifikasi di Blockchain \u2713",
     "noDistributions": "Tidak ada distribusi ditemukan untuk petani ini"
   },
+  "dashboard": {
+    "welcome": "Selamat datang, {name}",
+    "village": "{village}",
+    "soilReadings": "Data Tanah",
+    "marketPrices": "Harga Pasar",
+    "subsidyPending": "Subsidi Pending",
+    "storage": "Penyimpanan",
+    "recordSoil": "Catat Tanah",
+    "checkPrices": "Cek Harga",
+    "sync": "Sinkron",
+    "subsidy": "Subsidi",
+    "lastSync": "Sinkron terakhir",
+    "never": "Belum pernah",
+    "pendingChanges": "{count} perubahan"
+  },
   "syncStatus": {
     "offline": "Tersimpan lokal",
     "readyToSync": "Siap sinkronisasi",

@@ -126,6 +126,21 @@
     "verifiedOnChain": "Verified on Blockchain \u2713",
     "noDistributions": "No distributions found for this farmer"
   },
+  "dashboard": {
+    "welcome": "Welcome, {name}",
+    "village": "{village}",
+    "soilReadings": "Soil Readings",
+    "marketPrices": "Market Prices",
+    "subsidyPending": "Pending Subsidy",
+    "storage": "Storage",
+    "recordSoil": "Record Soil",
+    "checkPrices": "Check Prices",
+    "sync": "Sync",
+    "subsidy": "Subsidy",
+    "lastSync": "Last sync",
+    "never": "Never",
+    "pendingChanges": "{count} changes"
+  },
   "syncStatus": {
     "offline": "Saved locally",
     "readyToSync": "Ready to sync",
