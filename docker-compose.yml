@@ -27,5 +27,30 @@ services:
       - "--rpc-ws-enabled"
       - "--rpc-ws-host=0.0.0.0"
       - "--host-allowlist=*"
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://api:4000
+      NEXT_PUBLIC_BESU_RPC_URL: http://besu:8545
+    depends_on:
+      - api
+      - couchdb
+      - besu
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "4000:4000"
+    environment:
+      COUCHDB_URL: http://couchdb:5984
+      COUCHDB_USER: ${COUCHDB_USER:-admin}
+      COUCHDB_PASSWORD: ${COUCHDB_PASSWORD:-changeme}
+    depends_on:
+      - couchdb
 volumes:
   couchdb_data:
