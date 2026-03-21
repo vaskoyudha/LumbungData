@@ -49,3 +49,12 @@ export {
 // Database utilities
 export { getDatabase, DB_NAMES } from './databases';
 export { getDBConstructor } from './pouchdb';
+
+// Storage quota monitoring
+export {
+  getStorageEstimate,
+  isStorageLow,
+  requestPersistentStorage,
+  cleanupSyncedData,
+} from './storage';
+export type { StorageEstimate } from './storage';
