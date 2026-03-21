@@ -14,5 +14,18 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+  besu:
+    image: hyperledger/besu:latest
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+    command:
+      - "--network=dev"
+      - "--rpc-http-enabled"
+      - "--rpc-http-host=0.0.0.0"
+      - "--rpc-http-cors-origins=*"
+      - "--rpc-ws-enabled"
+      - "--rpc-ws-host=0.0.0.0"
+      - "--host-allowlist=*"
 volumes:
   couchdb_data:
