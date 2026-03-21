@@ -10,6 +10,7 @@
     "test": "echo 'web test placeholder'"
   },
   "dependencies": {
+    "@repo/db": "workspace:*",
     "@repo/shared": "workspace:*",
     "@repo/ui": "workspace:*",
     "@serwist/next": "9.5.7",

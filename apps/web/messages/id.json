@@ -8,12 +8,64 @@
     "soil": "Tanah",
     "market": "Pasar",
     "subsidy": "Subsidi",
-    "sync": "Sinkronisasi"
+    "sync": "Sinkronisasi",
+    "profile": "Profil"
   },
   "common": {
     "save": "Simpan",
     "cancel": "Batal",
     "loading": "Memuat...",
     "offline": "Offline"
+  },
+  "forms": {
+    "soil": {
+      "title": "Data Tanah",
+      "addNew": "Tambah Data Tanah",
+      "ph": "pH Tanah",
+      "nitrogen": "Nitrogen (mg/kg)",
+      "phosphorus": "Fosfor (mg/kg)",
+      "potassium": "Kalium (mg/kg)",
+      "moisture": "Kelembapan (%)",
+      "organicMatter": "Bahan Organik (%)",
+      "location": "Lokasi",
+      "notes": "Catatan",
+      "save": "Simpan",
+      "saved": "Data berhasil disimpan",
+      "empty": "Belum ada data tanah",
+      "emptyDescription": "Mulai dengan menambah data tanah pertama Anda",
+      "locationRequired": "Lokasi wajib diisi",
+      "phRange": "pH harus antara 0 dan 14"
+    },
+    "market": {
+      "title": "Harga Pasar",
+      "addNew": "Tambah Harga",
+      "cropType": "Jenis Tanaman",
+      "pricePerKg": "Harga per Kg (IDR)",
+      "qualityGrade": "Grade Kualitas",
+      "location": "Lokasi",
+      "save": "Simpan",
+      "saved": "Harga berhasil disimpan",
+      "empty": "Belum ada data harga",
+      "emptyDescription": "Mulai dengan menambah harga pasar pertama",
+      "locationRequired": "Lokasi wajib diisi",
+      "priceRequired": "Harga harus lebih dari 0",
+      "selectCrop": "Pilih jenis tanaman",
+      "selectGrade": "Pilih grade"
+    },
+    "profile": {
+      "title": "Profil Petani",
+      "name": "Nama",
+      "village": "Desa",
+      "phone": "Nomor Telepon",
+      "save": "Simpan",
+      "saved": "Profil berhasil disimpan",
+      "nameRequired": "Nama wajib diisi",
+      "villageRequired": "Desa wajib diisi"
+    }
+  },
+  "home": {
+    "soilDescription": "Catat dan pantau kondisi tanah",
+    "marketDescription": "Lihat dan catat harga pasar",
+    "profileDescription": "Kelola profil Anda"
   }
 }

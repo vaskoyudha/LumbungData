@@ -8,12 +8,64 @@
     "soil": "Soil",
     "market": "Market",
     "subsidy": "Subsidy",
-    "sync": "Sync"
+    "sync": "Sync",
+    "profile": "Profile"
   },
   "common": {
     "save": "Save",
     "cancel": "Cancel",
     "loading": "Loading...",
     "offline": "Offline"
+  },
+  "forms": {
+    "soil": {
+      "title": "Soil Data",
+      "addNew": "Add Soil Reading",
+      "ph": "Soil pH",
+      "nitrogen": "Nitrogen (mg/kg)",
+      "phosphorus": "Phosphorus (mg/kg)",
+      "potassium": "Potassium (mg/kg)",
+      "moisture": "Moisture (%)",
+      "organicMatter": "Organic Matter (%)",
+      "location": "Location",
+      "notes": "Notes",
+      "save": "Save",
+      "saved": "Data saved successfully",
+      "empty": "No soil data yet",
+      "emptyDescription": "Start by adding your first soil reading",
+      "locationRequired": "Location is required",
+      "phRange": "pH must be between 0 and 14"
+    },
+    "market": {
+      "title": "Market Prices",
+      "addNew": "Add Price",
+      "cropType": "Crop Type",
+      "pricePerKg": "Price per Kg (IDR)",
+      "qualityGrade": "Quality Grade",
+      "location": "Location",
+      "save": "Save",
+      "saved": "Price saved successfully",
+      "empty": "No price data yet",
+      "emptyDescription": "Start by adding the first market price",
+      "locationRequired": "Location is required",
+      "priceRequired": "Price must be greater than 0",
+      "selectCrop": "Select crop type",
+      "selectGrade": "Select grade"
+    },
+    "profile": {
+      "title": "Farmer Profile",
+      "name": "Name",
+      "village": "Village",
+      "phone": "Phone Number",
+      "save": "Save",
+      "saved": "Profile saved successfully",
+      "nameRequired": "Name is required",
+      "villageRequired": "Village is required"
+    }
+  },
+  "home": {
+    "soilDescription": "Record and monitor soil conditions",
+    "marketDescription": "View and record market prices",
+    "profileDescription": "Manage your profile"
   }
 }
