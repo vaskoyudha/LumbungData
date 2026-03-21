@@ -10,6 +10,8 @@
     "test": "echo 'p2p test placeholder'"
   },
   "dependencies": {
+    "@repo/db": "workspace:*",
+    "@repo/shared": "workspace:*",
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
