@@ -17,6 +17,10 @@
     "test": {
       "dependsOn": ["^build"]
     },
+    "test:e2e": {
+      "cache": false,
+      "env": ["CI"]
+    },
     "clean": {
       "cache": false
     }

@@ -7,7 +7,7 @@
   "scripts": {
     "build": "echo 'p2p build placeholder'",
     "lint": "echo 'p2p lint placeholder'",
-    "test": "echo 'p2p test placeholder'"
+    "test": "vitest run"
   },
   "dependencies": {
     "@repo/db": "workspace:*",
@@ -17,6 +17,8 @@
   "devDependencies": {
     "@repo/config": "workspace:*",
     "@types/qrcode": "^1.5.5",
-    "typescript": "^5.3.3"
+    "happy-dom": "^14.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^2.0.0"
   }
 }

@@ -23,6 +23,10 @@ out/
 # Planning artifacts
 .sisyphus/
 
+# Playwright
+test-results/
+playwright-report/
+
 # Editor
 .DS_Store
 *.swp

@@ -6,11 +6,19 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
-    "test": "turbo test",
+    "test": "vitest run --workspace vitest.workspace.ts",
+    "test:watch": "vitest --workspace vitest.workspace.ts",
+    "test:e2e": "playwright test",
     "clean": "turbo clean && rm -rf node_modules"
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.0.0",
     "@types/node": "25.5.0",
-    "turbo": "latest"
+    "@vitest/coverage-v8": "^2.0.0",
+    "happy-dom": "^14.0.0",
+    "turbo": "latest",
+    "vitest": "^2.0.0"
   }
 }
