@@ -58,3 +58,9 @@ export {
   cleanupSyncedData,
 } from './storage';
 export type { StorageEstimate } from './storage';
+
+export { startSync } from './sync';
+export type { SyncHandle } from './sync';
+export { resolveConflicts } from './conflict-resolution';
+export { SyncManager } from './sync-manager';
+export type { SyncState } from './sync-manager';
