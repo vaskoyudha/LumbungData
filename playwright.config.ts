@@ -3,7 +3,7 @@ import { defineConfig, devices } from '@playwright/test'
 export default defineConfig({
   testDir: './apps/web/e2e',
   fullyParallel: false,
-  retries: process.env['CI'] ? 2 : 1,
+  retries: 2,
   timeout: 30_000,
   use: {
     baseURL: 'http://localhost:3000',
@@ -13,6 +13,10 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'mobile-chrome',
+      use: { ...devices['Pixel 5'] },
     },
   ],
   webServer: {
